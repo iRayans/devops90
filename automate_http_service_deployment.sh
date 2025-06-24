@@ -1,13 +1,13 @@
 #!/bin/bash
-apt update
+sudo apt update
 echo "install dotnet"
-apt install -y aspnetcore-runtime-6.0
-apt install -y dotnet-sdk-6.0
+sudo apt install -y aspnetcore-runtime-6.0
+sudo apt install -y dotnet-sdk-6.0
 
 #install git
 echo "install git"
-apt install git
-apt install unzip
+sudo apt install git
+sudo apt install unzip
 
 #install aws cli
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -23,7 +23,7 @@ sudo -u ubuntu git config --global user.email "iirharbi@gmail.com"
 #clone repo from code commit
 cd /home/ubuntu
 echo "git clone"
-sudo -u ubuntu git clone https://git-codecommit.eu-north-1.amazonaws.com/v1/repos/srv-02
+git clone https://github.com/iRayans/devops90.git
 cd srv-02
 
 #build the dot net service
